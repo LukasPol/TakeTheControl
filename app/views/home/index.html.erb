@@ -1,4 +1,4 @@
 <h1>Take The Control</h1>
-<p>Bem-vindo ao Take The Control</p>
+<p>Bem-vindo(a) <%= current_user.first_name %> ao Take The Control</p>
 
 <%= link_to "Sair", destroy_user_session_path, method: :delete %>
