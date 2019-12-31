@@ -26,4 +26,5 @@ class User < ApplicationRecord
   has_many :incomes
   belongs_to :gender
   belongs_to :schooling
+  
 end

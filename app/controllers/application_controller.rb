@@ -5,11 +5,9 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birthday, :gender, :schooling])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :birthday, :gender, :schooling])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birthday, :gender_id, :schooling_id])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :birthday, :gender_id, :schooling_id])
   end
-
-  private
 
   def fetch_collections_with_id
     @genders = Gender.all.map { |g| [g.name, g.id] }
