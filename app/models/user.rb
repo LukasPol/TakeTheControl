@@ -24,4 +24,5 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :birthday, presence: true
 
   has_many :incomes
+  has_many :spendings
 end
