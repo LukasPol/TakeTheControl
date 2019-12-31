@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_31_155922) do
+ActiveRecord::Schema.define(version: 2019_12_31_161817) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -30,9 +30,6 @@ ActiveRecord::Schema.define(version: 2019_12_31_155922) do
 
   create_table "schoolings", force: :cascade do |t|
     t.string "name"
-  create_table "incomes", force: :cascade do |t|
-    t.float "value"
-    t.string "type"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -48,8 +45,14 @@ ActiveRecord::Schema.define(version: 2019_12_31_155922) do
     t.string "first_name"
     t.string "last_name"
     t.date "birthday"
+    t.bigint "gender_id"
+    t.bigint "schooling_id"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["gender_id"], name: "index_users_on_gender_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["schooling_id"], name: "index_users_on_schooling_id"
   end
 
+  add_foreign_key "users", "genders"
+  add_foreign_key "users", "schoolings"
 end
