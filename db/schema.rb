@@ -10,16 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2019_12_31_155922) do
-=======
-ActiveRecord::Schema.define(version: 2019_12_31_150815) do
->>>>>>> development
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "genders", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -35,11 +30,9 @@ ActiveRecord::Schema.define(version: 2019_12_31_150815) do
 
   create_table "schoolings", force: :cascade do |t|
     t.string "name"
-=======
   create_table "incomes", force: :cascade do |t|
     t.float "value"
     t.string "type"
->>>>>>> development
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
