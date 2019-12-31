@@ -10,16 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 2019_12_31_155922) do
-=======
-ActiveRecord::Schema.define(version: 2019_12_31_150815) do
->>>>>>> development
+ActiveRecord::Schema.define(version: 2019_12_31_173210) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-<<<<<<< HEAD
   create_table "genders", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
@@ -33,13 +28,15 @@ ActiveRecord::Schema.define(version: 2019_12_31_150815) do
     t.string "type"
   end
 
+  create_table "revenues", force: :cascade do |t|
+    t.string "type"
+    t.float "value"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "schoolings", force: :cascade do |t|
     t.string "name"
-=======
-  create_table "incomes", force: :cascade do |t|
-    t.float "value"
-    t.string "type"
->>>>>>> development
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -55,8 +52,15 @@ ActiveRecord::Schema.define(version: 2019_12_31_150815) do
     t.string "first_name"
     t.string "last_name"
     t.date "birthday"
+    t.bigint "gender_id"
+    t.bigint "schooling_id"
+    t.string "phone"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["gender_id"], name: "index_users_on_gender_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+    t.index ["schooling_id"], name: "index_users_on_schooling_id"
   end
 
+  add_foreign_key "users", "genders"
+  add_foreign_key "users", "schoolings"
 end
