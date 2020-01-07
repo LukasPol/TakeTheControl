@@ -23,6 +23,10 @@ class User < ApplicationRecord
 
   validates :first_name, :last_name, :birthday, presence: true
 
+  belongs_to :gender
+  belongs_to :schooling
+  
   has_many :incomes
   has_many :spendings
+  has_many :revenues
 end
