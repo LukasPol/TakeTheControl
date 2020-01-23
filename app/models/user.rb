@@ -21,12 +21,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates :first_name, :last_name, :birthday, presence: true
-
   belongs_to :gender
   belongs_to :schooling
+  belongs_to :gender
+  belongs_to :schooling
+
   
   has_many :incomes
   has_many :spendings
   has_many :revenues
+  
+  validates :first_name, :last_name, :birthday, presence: true
+
 end
