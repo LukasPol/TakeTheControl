@@ -1,3 +1,11 @@
+GIT
+  remote: https://github.com/rails/jbuilder.git
+  revision: bec0d6c840c3486ee589d5de0ba9c348ccbc27ee
+  branch: master
+  specs:
+    jbuilder (2.9.1)
+      activesupport (>= 5.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -119,8 +127,6 @@ GEM
     i18n (1.8.2)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
-    jbuilder (2.9.1)
-      activesupport (>= 4.2.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
       rb-inotify (~> 0.9, >= 0.9.7)
@@ -137,7 +143,7 @@ GEM
     mini_mime (1.0.2)
     mini_portile2 (2.4.0)
     minitest (5.14.0)
-    msgpack (1.3.1)
+    msgpack (1.3.2)
     nio4r (2.5.2)
     nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
@@ -268,7 +274,7 @@ DEPENDENCIES
   devise
   factory_bot_rails
   ffaker
-  jbuilder (~> 2.5)
+  jbuilder!
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18.4, < 2.0)
   puma (~> 3.11)
