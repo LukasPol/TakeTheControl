@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Take The Control </title>
+
+    <%= stylesheet_link_tag 'bootstrap/bootstrap.min', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'login/login', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <div class=container>
+      <div class="row">
+        <div class="col-6 offset-3 mt-5">
+          <%= yield %>
+        <div>
+      </div>
+    </div>
+    
+    <%= javascript_tag 'jquery-3.4.1.min'%>
+    <%= javascript_tag 'bootstrap.min' %>
+  </body>
+</html>

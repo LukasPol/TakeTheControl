@@ -5,30 +5,37 @@
 
   <div class="form-inputs">
     <%= f.input :first_name,
-                required: true %>
+                required: true,
+                input_html: { class: 'form-control' } %>
     <%= f.input :last_name,
-                required: true %>
-    <%= f.input :gender_id, as: :select, collection: @genders,
-                required: true %>
-    <%= f.input :schooling_id, as: :select, collection: @schoolings,
-                required: true %>
-    <%= f.input :birthday, as: :date, start_year: Date.today.year - 90, 
-                end_year: Date.today.year, order: [:day, :month, :year],
-                required: true %>
-    <%= f.input :phone,
-                required: true %>
+                required: true,
+                input_html: { class: 'form-control' } %>
     <%= f.input :email,
                 required: true,
-                input_html: { autocomplete: "email" }%>
+                input_html: { autocomplete: "email", class: 'form-control' }%>
     <%= f.input :password,
-                required: true %>
+                required: true,
+                input_html: { class: 'form-control' } %>
     <%= f.input :password_confirmation,
-                required: true %>
-    
+                required: true,
+                input_html: { class: 'form-control' } %>
+    <%= f.input :gender_id, as: :select, collection: @genders,
+                required: true,
+                input_html: { class: 'form-control' } %>
+    <%= f.input :schooling_id, as: :select, collection: @schoolings,
+                required: true,
+                input_html: { class: 'form-control' } %>
+    <%= f.input :phone,
+                required: true,
+                input_html: { class: 'form-control' } %>
+    <%= f.input :birthday, as: :date, start_year: Date.today.year - 90, 
+                end_year: Date.today.year, order: [:day, :month, :year],
+                required: true,
+                input_html: { class: 'form-control' } %>
   </div>
-
+  <br/>
   <div class="form-actions">
-    <%= f.button :submit %>
+    <%= f.button :submit, class: "btn btn-secondary btn-block"  %>
   </div>
 <% end %>
 
