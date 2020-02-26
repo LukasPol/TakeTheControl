@@ -15,6 +15,7 @@
 
  */
 
+console.log('mateee')
 (function() {
   isWindows = navigator.platform.indexOf('Win') > -1 ? true : false;
 
