@@ -1,12 +1,12 @@
-import "./core/jquery.min";
-require("./core/popper.min");
+// require("./core/jquery.min");
+// require("./core/popper.min");
 require("./core/bootstrap-material-design.min");
 require("./plugins/perfect-scrollbar.jquery.min");
 // require("./plugins/moment.min");
 require("./plugins/sweetalert2");
 require("./plugins/jquery.validate.min");
 require("./plugins/jquery.bootstrap-wizard");
-require("./plugins/bootstrap-selectpicker");
+// require("./plugins/bootstrap-selectpicker");
 // require("./plugins/bootstrap-datetimepicker.min")
 // require("./plugins/jquery.dataTables.min");
 // require("./plugins/bootstrap-tagsinput");
