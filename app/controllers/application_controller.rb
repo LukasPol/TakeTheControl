@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
+  layout :layout_by_resource
+
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birthday, :gender_id, :schooling_id, :phone])
     devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :birthday, :gender_id, :schooling_id, :phone])
@@ -12,6 +14,14 @@ class ApplicationController < ActionController::Base
   def fetch_collections_with_id
     @genders = Gender.all.map { |g| [g.name, g.id] }
     @schoolings = Schooling.all.map { |s| [s.name, s.id] }
+  end
+
+  def layout_by_resource
+    if devise_controller? && !request.fullpath.match?('/users/edit') && !(request.fullpath.match('/users') && params[:action] == 'update')
+      'authenticate'
+    else
+      'application'
+    end
   end
 
 end
