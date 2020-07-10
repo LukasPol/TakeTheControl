@@ -20,8 +20,12 @@
     <%= javascript_pack_tag 'theme' %>
   </head>
   <body data-flash-messages="<%= JSON.dump(flash.to_a) %>">
-    <div class="content">
-      <%= yield %>
+    <div class="container content">
+      <div class="row">
+        <div class="col-8 col-lg-6 col-xl-6 mx-auto text-center my-3">
+          <%= yield %>
+        </div>
+      </div>
     </div>
   </body>
 </html>
