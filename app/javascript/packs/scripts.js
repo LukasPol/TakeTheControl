@@ -3,4 +3,4 @@ require('popper.js/dist/umd/popper');
 window.Popper = require('popper.js').default;
 // require('@popperjs/core')
 import 'bootstrap'
-// require("../scripts/global");
+require("../scripts/global");
