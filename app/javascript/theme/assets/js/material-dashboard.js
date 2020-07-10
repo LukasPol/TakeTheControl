@@ -38,7 +38,7 @@ var transparent = true;
 // var fixedTop = false;
 
 var mobile_menu_visible = 0,
-  mobile_menu_initialized = false,
+  mobile_menu_initialized = false
 // toggle_initialized = false,
 // bootstrap_nav_initialized = false;
 
