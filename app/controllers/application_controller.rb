@@ -7,8 +7,8 @@ class ApplicationController < ActionController::Base
   layout :layout_by_resource
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birthday, :gender_id, :schooling_id, :phone])
-    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :birthday, :gender_id, :schooling_id, :phone])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name, :last_name, :birthday, :gender_id, :schooling_id, :phone, :avatar])
+    devise_parameter_sanitizer.permit(:account_update, keys: [:first_name, :last_name, :birthday, :gender_id, :schooling_id, :phone, :avatar])
   end
 
   def fetch_collections_with_id

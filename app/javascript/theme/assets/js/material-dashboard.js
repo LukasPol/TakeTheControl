@@ -208,7 +208,7 @@ md = {
         },
       }
 
-      var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
+      // var dailySalesChart = new Chartist.Line('#dailySalesChart', dataDailySalesChart, optionsDailySalesChart);
 
       // var animationHeaderChart = new Chartist.Line('#websiteViewsChart', dataDailySalesChart, optionsDailySalesChart);
     }
@@ -587,7 +587,7 @@ md = {
           confirmButtonClass: 'btn btn-success',
           cancelButtonClass: 'btn btn-danger',
           buttonsStyling: false
-        }).then(function (result) {
+        }).then(function () {
 
           var eventData;
           event_title = $('#input-field').val();
