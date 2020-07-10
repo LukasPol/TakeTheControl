@@ -4,6 +4,9 @@ services:
                 image: postgres
                 volumes:
                         - ./tmp/db:/var/lib/postgresql/data
+                environment:
+                        POSTGRES_USER: 'username'
+                        POSTGRES_HOST_AUTH_METHOD: trust
         web:
                 build: .
                 command: bash -c "rm -f tmp/pids/server.pid && sleep 100000"
