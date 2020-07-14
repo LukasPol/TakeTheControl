@@ -2,9 +2,9 @@ class IncomesController < ApplicationController
   before_action :set_income, only: [:show, :edit, :update, :destroy]
   
   def index
-    @incomes = Income.all
+    @incomes = Income.where(user_id: current_user)
   end
-
+  
   def new
     @income = Income.new
   end

@@ -5,6 +5,6 @@
 <% @incomes.each do |i| %>
   <p> <%= link_to i.income_type, i %> </p>
   <p> <%= i.value %></p>
-  <p> <small>Criado há <%= time_ago_in_words(t.created_at) %></small> </p>
+  <p> <small>Criado há <%= time_ago_in_words(i.created_at) %></small> </p>
   <hr />
 <% end %>
