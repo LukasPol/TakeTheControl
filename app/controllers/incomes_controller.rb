@@ -1,6 +1,8 @@
-class IncomeController < ApplicationController
+class IncomesController < ApplicationController
+  before_action :set_income, only: [:show, :edit, :update, :destroy]
+  
   def index
-    @incomes = Income.where(user_id: current_user)
+    @incomes = Income.all
   end
 
   def new
@@ -11,6 +13,7 @@ class IncomeController < ApplicationController
 
   def create
     @income = Income.new(income_params)
+    @income.user = current_user
     if @income.save
       redirect_to @income, notice: 'Renda Adicionada'
     else
@@ -35,6 +38,10 @@ class IncomeController < ApplicationController
 
   private
   def income_params
-    params.require(:income).permit(:value, :type)
+    params.require(:income).permit(:income_type, :value)
+  end
+
+  def set_income
+    @income = Income.find(params[:id])
   end
 end
