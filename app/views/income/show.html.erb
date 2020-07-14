@@ -1,0 +1,11 @@
+<h1>
+  <%= @income.type %>
+</h1>
+
+<p>
+  <%= @income.value %>
+</p>
+
+<%= link_to 'Voltar', incomes_path %>
+<%= link_to 'Editar', edit_income_path(@income) %> 
+<%= link_to 'Deletar', @income, method: :delete, data: { confirm: 'Tem certeza?' } %>

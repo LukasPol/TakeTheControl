@@ -1,0 +1,10 @@
+<h1>Renda</h1>
+
+<%= link_to "Adicionar Uma renda", new_income_path %>
+
+<% @incomes.each do |i| %>
+  <p> <%= link_to i.type, i %> </p>
+  <p> <%= i.value %></p>
+  <p> <small>Criado há <%= time_ago_in_words(t.created_at) %></small> </p>
+  <hr />
+<% end %>
