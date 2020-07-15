@@ -1,0 +1,10 @@
+<h1>Entradas</h1>
+
+<%= link_to "Adicionar uma saída", new_spending_path %>
+
+<% @spendings.each do |s| %>
+  <p> <%= link_to s.spending_type, s %> </p>
+  <p> <%= s.value %></p>
+  <p> <small>Criado há <%= time_ago_in_words(s.created_at) %></small> </p>
+  <hr />
+<% end %>

@@ -1,0 +1,11 @@
+<h1>
+  <%= @spending.spending_type %>
+</h1>
+
+<p>
+  <%= @spending.value %>
+</p>
+
+<%= link_to 'Voltar', spendings_path %>
+<%= link_to 'Editar', edit_spending_path(@spending) %> 
+<%= link_to 'Deletar', @spending, method: :delete, data: { confirm: 'Tem certeza?' } %>
