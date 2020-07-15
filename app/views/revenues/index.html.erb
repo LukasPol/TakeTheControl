@@ -3,7 +3,7 @@
 <%= link_to "Adicionar uma entrada", new_revenue_path %>
 
 <% @revenues.each do |r| %>
-  <p> <%= link_to r.income_type, i %> </p>
+  <p> <%= link_to r.revenue_type, r %> </p>
   <p> <%= r.value %></p>
   <p> <small>Criado há <%= time_ago_in_words(r.created_at) %></small> </p>
   <hr />

@@ -39,7 +39,7 @@ class RevenuesController < ApplicationController
   private
 
   def revenue_params
-    params.require(:revenue).permit(:revenue_type, :values)
+    params.require(:revenue).permit(:revenue_type, :value)
   end
 
   def set_revenue
